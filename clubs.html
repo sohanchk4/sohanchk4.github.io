@@ -8,56 +8,75 @@
   </head>
 
   <body>
-    <!-- math float decorations -->
-    <div class="math-float" style="left:15%;top:30%;">
-      d/dt (knowledge shared) > 0
-    </div>
-    <div class="math-float alt" style="left:70%;top:65%;">
-      utility = confidence in money decisions
+    <!-- soft finance background notes -->
+    <div class="bg-math-layer">
+      <div class="bg-math-block">
+        <div class="bg-math-label">compounding discipline</div>
+        skill(t+1) = skill(t) · (1 + effort)
+      </div>
+      <div class="bg-math-block">
+        <div class="bg-math-label">confidence function</div>
+        utility = knowledge + self control
+      </div>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav class="site-nav">
       <div class="nav-left">
-        <div class="brand">
-          <span>Sohan Chakravorty</span>
-          <span class="brand-pill">CMU Finance and ML</span>
+        <div class="brand-block">
+          <div class="brand-name">Sohan Chakravorty</div>
+          <div class="brand-line2">Finance + StatML, Carnegie Mellon University</div>
         </div>
+
         <div class="nav-links">
           <a href="index.html">About</a>
           <a href="internships.html">Internships</a>
           <a href="clubs.html">Clubs</a>
           <a href="nonprofit.html">Nonprofit</a>
+          <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
 
-      <div class="toggle-wrapper">
-        <button id="theme-toggle">Light Mode</button>
-      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
     </nav>
 
     <main class="page-wrapper">
+      <!-- HEADER -->
       <header class="page-header">
-        <div class="topline">
-          Teaching, competition, discipline
-          <span class="cmu-tag">Carnegie Mellon University</span>
+        <div class="header-left">
+          <div class="topline">
+            <span>teaching, competition, discipline</span>
+            <span class="cmu-tag">CMU</span>
+          </div>
+
+          <div class="page-title-row">
+            <h1 class="page-title">Clubs and Leadership</h1>
+            <div class="typewriter" id="typewriter"></div>
+          </div>
+
+          <div class="subtitle">
+            I build things that keep going after I leave. I design personal finance curriculum, compete hard, and take discipline seriously. That means Moneythink CMU, DECA, Model UN, fencing, table tennis, and soccer; not just sitting in spreadsheets.
+          </div>
+
+          <div class="badge-row">
+            <div class="badge">Moneythink CMU</div>
+            <div class="badge">DECA Top 10 Int’l</div>
+            <div class="badge">Model UN awards</div>
+            <div class="badge">National fencing</div>
+            <div class="badge">Table tennis coach</div>
+          </div>
         </div>
 
-        <h1 class="page-title">Clubs and Campus Leadership</h1>
-
-        <div class="subtitle">
-          I build programs that keep going after I leave, and I take competition seriously. Finance is one part, execution is the other.
-        </div>
-
-        <div class="badge-row">
-          <div class="badge">Moneythink CMU</div>
-          <div class="badge">DECA Top 10 Int'l</div>
-          <div class="badge">Model UN Awards</div>
-          <div class="badge">National Fencing</div>
+        <div class="header-right">
+          <img src="snoopy_walk.png" alt="Snoopy walking" />
+          <div class="caption">
+            staying on task, allegedly
+          </div>
         </div>
       </header>
 
-      <section class="section-card">
+      <!-- Moneythink -->
+      <section class="section-block">
         <div class="section-heading">
           <div>
             <span class="role-title">Vice President, Curriculums</span>
@@ -67,75 +86,149 @@
         </div>
         <div class="section-body">
           <ul>
-            <li>Leading a team that designs personal finance lessons taught by CMU students.</li>
-            <li>Partnering with high schools to deliver real world money education sessions.</li>
-            <li>Building a student run personal finance course at CMU to scale the impact.</li>
+            <li>Leading student educators to teach practical personal finance without talking down to people</li>
+            <li>Partnering with high schools to run sessions on budgeting, debt, saving and agency</li>
+            <li>Preparing a student run personal finance course at CMU so this still exists after I graduate</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- Competitions -->
+      <section class="section-block">
         <div class="section-heading">
-          <div>Academic Competition</div>
+          <div>Competition</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>DECA, Top 10 Internationally and 4 times Top 5 in New Jersey.</li>
-            <li>Model United Nations, Top 4 at Yale and Princeton conferences.</li>
+            <li>DECA: Top 10 International, 4x Top 5 in New Jersey</li>
+            <li>Model United Nations: Top 4 at Yale and Princeton conferences</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- Athletics -->
+      <section class="section-block">
         <div class="section-heading">
           <div>Athletics</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>Nationally rated fencer.</li>
-            <li>Former nationally rated table tennis player and current coach, using table tennis as therapy and engagement for seniors through nonprofit work.</li>
-            <li>MLS NEXT soccer background.</li>
+            <li>Nationally rated fencing</li>
+            <li>Former nationally rated table tennis player, now coaching. Through FitYou, using TT as therapy for Parkinson's</li>
+            <li>Former MLS NEXT soccer</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- Other -->
+      <section class="section-block">
         <div class="section-heading">
-          <div>Certs and Languages</div>
+          <div>Other</div>
         </div>
         <div class="section-body">
-          <div class="badge-row">
-            <div class="badge">Bloomberg Market Concepts</div>
-            <div class="badge">English, Fluent</div>
-            <div class="badge">Bengali, Fluent</div>
-            <div class="badge">Spanish, Intermediate</div>
-          </div>
+          <ul>
+            <li>Bloomberg Market Concepts certification</li>
+            <li>Spoken languages: English (fluent), Bengali (fluent), Spanish (intermediate)</li>
+            <li>Software I actually touch: Microsoft Suite, Bloomberg Terminal, Adobe Photoshop, VS Code, Docker, Jupyter Notebook</li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>&copy; Sohan Chakravorty 2025</div>
+      <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <div class="snoopy-floating">
-      <div class="snoopy-emoji">🐶</div>
-      <div class="bubble">
-        Form is temporary. Footwork is forever.
-      </div>
-    </div>
-
+    <!-- THEME TOGGLE SCRIPT -->
     <script>
-      const btn = document.getElementById("theme-toggle");
-      function applyTheme() {
+      const themeBtn = document.getElementById("theme-toggle");
+      function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+        themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      btn.addEventListener("click", () => {
+      themeBtn.addEventListener("click", () => {
         document.documentElement.classList.toggle("light");
-        applyTheme();
+        applyThemeIcon();
       });
-      applyTheme();
+      applyThemeIcon();
+    </script>
+
+    <!-- TYPEWRITER SCRIPT -->
+    <script>
+      function runTypewriter(phrases) {
+        const el = document.getElementById("typewriter");
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let mode = "typing";
+        let pauseCounter = 0;
+
+        function tick() {
+          const currentPhrase = phrases[phraseIndex];
+
+          if (mode === "typing") {
+            charIndex++;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === currentPhrase.length) {
+              mode = "pausingAfterType";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "pausingAfterType") {
+            pauseCounter++;
+            el.textContent = currentPhrase + "▌";
+            if (pauseCounter > 20) {
+              if (phraseIndex === phrases.length - 1) {
+                mode = "done";
+              } else {
+                mode = "deleting";
+              }
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "deleting") {
+            charIndex--;
+            if (charIndex < 0) charIndex = 0;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === 0) {
+              mode = "pausingAfterDelete";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 80);
+            return;
+          }
+
+          if (mode === "pausingAfterDelete") {
+            pauseCounter++;
+            el.textContent = "▌";
+            if (pauseCounter > 8) {
+              phraseIndex++;
+              charIndex = 0;
+              mode = "typing";
+            }
+            setTimeout(tick, 120);
+            return;
+          }
+
+          if (mode === "done") {
+            el.textContent = currentPhrase;
+            el.classList.add("done");
+            return;
+          }
+        }
+
+        tick();
+      }
+
+      runTypewriter([
+        "Discipline is a transferable asset",
+        "I coach table tennis for Parkinson’s seniors",
+        "Discipline is a transferable asset"
+      ]);
     </script>
   </body>
 </html>
