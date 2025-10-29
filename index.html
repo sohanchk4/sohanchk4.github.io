@@ -8,166 +8,255 @@
   </head>
 
   <body>
-    <!-- math float decorations -->
-    <div class="math-float" style="left:5%;top:20%;">
-      ∂/∂t ∫Ω ρ dV = - ∬∂Ω J · n dS
-    </div>
-    <div class="math-float alt" style="left:70%;top:60%;">
-      E[ r ] = Σ pᵢ · rᵢ
-    </div>
-    <div class="math-float" style="left:80%;top:25%;">
-      argmaxᵥ ( α·μ - β·σ² )
+    <!-- soft finance background notes, left column under nav -->
+    <div class="bg-math-layer">
+      <div class="bg-math-block">
+        <div class="bg-math-label">expected return</div>
+        E[r] = Σ pᵢ · rᵢ
+      </div>
+      <div class="bg-math-block">
+        <div class="bg-math-label">portfolio balance</div>
+        maximize α·μ − β·σ²
+        (return vs risk)
+      </div>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav class="site-nav">
       <div class="nav-left">
-        <div class="brand">
-          <span>Sohan Chakravorty</span>
-          <span class="brand-pill">CMU Finance and ML</span>
+        <div class="brand-block">
+          <div class="brand-name">Sohan Chakravorty</div>
+          <div class="brand-line2">Finance + StatML, Carnegie Mellon University</div>
         </div>
+
         <div class="nav-links">
           <a href="index.html">About</a>
           <a href="internships.html">Internships</a>
           <a href="clubs.html">Clubs</a>
           <a href="nonprofit.html">Nonprofit</a>
+          <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
 
-      <div class="toggle-wrapper">
-        <button id="theme-toggle">Light Mode</button>
-      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
     </nav>
 
     <main class="page-wrapper">
+      <!-- HEADER -->
       <header class="page-header">
-        <div class="topline">
-          Finance, data, access
-          <span class="cmu-tag">Carnegie Mellon University</span>
+        <!-- left side -->
+        <div class="header-left">
+          <div class="topline">
+            <span>capital, data, people</span>
+            <span class="cmu-tag">CMU</span>
+          </div>
+
+          <div class="page-title-row">
+            <h1 class="page-title">Hi, I'm Sohan Chakravorty.</h1>
+            <div class="typewriter" id="typewriter"></div>
+          </div>
+
+          <div class="subtitle">
+            I study Finance and Statistics + Machine Learning at Carnegie Mellon University. I'm interested in valuation, portfolio construction, and quantitative research. I've built algorithmic trading models. I do growth equity analysis. I've run ETF sentiment screens and turn that into direction. I also teach personal finance to people who don't get the privilege of being in the room when money gets explained.
+          </div>
+
+          <div class="badge-row">
+            <div class="badge">DCF and valuation</div>
+            <div class="badge">ETF sentiment research</div>
+            <div class="badge">Algorithmic trading</div>
+            <div class="badge">Financial literacy education</div>
+            <div class="badge">Community work in North Jersey</div>
+          </div>
         </div>
 
-        <h1 class="page-title">
-          Hi, I'm Sohan Chakravorty.
-        </h1>
-
-        <div class="subtitle">
-          I am a Carnegie Mellon student in Finance, also in Statistics and Machine Learning with a 4.0 GPA. I build at the intersection of markets, data, and impact. I study valuation and portfolio construction, and I also care about real-world access to financial literacy and community health work for seniors and immigrant families. :contentReference[oaicite:1]{index=1}
-        </div>
-
-        <div class="badge-row">
-          <div class="badge">Valuation and DCF</div>
-          <div class="badge">Algorithmic trading</div>
-          <div class="badge">ETF research</div>
-          <div class="badge">Python and pandas</div>
-          <div class="badge">Community programs</div>
+        <!-- right side -->
+        <div class="header-right">
+          <img src="snoopy_chill.png" alt="Snoopy chilling" />
+          <div class="caption">
+            Snoopy is here because I like Snoopy. No deeper branding strategy.
+          </div>
         </div>
       </header>
 
-      <section class="section-card">
+      <!-- WHAT I DO -->
+      <section class="section-block">
         <div class="section-heading">
-          <div>What I Do</div>
+          <div>What I Actually Do</div>
         </div>
         <div class="section-body">
           <p>
-            I analyze companies, public markets, and early stage startups. I have built algorithmic trading models that historically beat the market, run research on ETFs using NLP, and develop theses for growth equity in engineering and energy.
+            I analyze companies, public markets, and early stage startups. I have built algorithmic trading models that historically outperformed the market. I run sentiment screens on ETF materials using NLP and turn that into recommendations and positions. I build theses for early stage energy and engineering focused investments and I break down cap tables.
           </p>
           <p>
-            I also design financial literacy programs for high school students and help run nonprofit work for seniors and Parkinson’s patients, plus Bengali cultural programming in North Jersey.
+            I also help create and teach personal finance curriculums and work on nonprofits supporting senior citizens with Parkinson's and the Bengali American community. This is money work too, just not Wall Street flavored.
           </p>
         </div>
       </section>
 
       <div class="grid-2">
-        <section class="section-card">
+        <!-- EDUCATION -->
+        <section class="section-block">
           <div class="section-heading">
             <div>Education</div>
           </div>
           <div class="section-body">
             <p>
               <span class="role-title">Carnegie Mellon University</span><br/>
-              BSBA in Finance and BS in Statistics and Machine Learning, GPA 4.0 out of 4.0
+              BS, Business Admin (Finance) + BS, Statistics and Machine Learning <br>GPA: 4.0/4.0
             </p>
             <p class="role-dates">
-              Relevant coursework, Multivariable Calculus, Accelerated Microeconomics, Accounting
-            </p>
-            <p>
-              Bergen County Academies, IB Diploma. IB Economics HL 7, IB Math AA HL 6, AP Statistics 5, AP Calculus 5.
+              Relevant coursework: Multivariable Calculus, Accelerated Microeconomics, Accounting
             </p>
           </div>
         </section>
 
-        <section class="section-card">
+        <!-- SKILLS -->
+        <section class="section-block">
           <div class="section-heading">
-            <div>Core Skills</div>
+            <div>Skills</div>
           </div>
           <div class="section-body">
             <ul>
-              <li>Valuation and DCF</li>
-              <li>Algorithmic trading and portfolio design</li>
-              <li>Market research and sector analysis</li>
+              <li>DCF, goodwill valuation, comps, GAAP accounting</li>
+              <li>Quantitative portfolio construction and backtesting</li>
+              <li>ETF recommendation using NLP and sentiment analysis</li>
               <li>Python, pandas, NumPy, Matplotlib, SQL, Java</li>
-              <li>GAAP accounting and financial statements</li>
-              <li>Teaching financial literacy through Moneythink CMU</li>
-              <li>Budgeting and grant writing for nonprofit work</li>
+              <li>Financial statement building and analysis</li>
+              <li>Curriculum design for student led financial literacy</li>
+              <li>Grant writing and nonprofit budgeting</li>
             </ul>
           </div>
         </section>
       </div>
 
       <div class="grid-2">
-        <section class="section-card">
+        <!-- CONTACT -->
+        <section class="section-block">
           <div class="section-heading">
             <div>Contact</div>
           </div>
           <div class="section-body contact-links">
             <p>
-              Email, <a href="mailto:sohanc@cmu.edu">sohanc@cmu.edu</a><br/>
-              LinkedIn, <a href="https://linkedin.com/in/sohan-chakravorty/">linkedin.com/in/sohan-chakravorty/</a><br/>
-              NYC Area
+              <strong>Email:</strong> <a href="mailto:sohanc@cmu.edu">sohanc@cmu.edu</a><br/>
+              <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sohan-chakravorty/">linkedin.com/in/sohan-chakravorty/</a><br/>
+              <strong>Location:</strong> NYC Area
             </p>
           </div>
         </section>
 
-        <section class="section-card">
+        <!-- QUICK HIGHLIGHTS -->
+        <section class="section-block">
           <div class="section-heading">
-            <div>Outside Class</div>
+            <div>Quick Highlights</div>
           </div>
           <div class="section-body">
             <ul>
-              <li>Growth Equity Analyst at Scottie Ventures, energy and engineering focus</li>
-              <li>Vice President of Curriculums at Moneythink CMU, building student led financial literacy</li>
-              <li>Financial Coordinator at FitYouUSA, serving seniors and Parkinson’s patients through activity and connection</li>
-              <li>Creative Director at North Jersey Bengali Association, culture and fundraising for a nonprofit concert above 230,000 dollars in revenue</li>
+              <li>Growth Equity Analyst at Scottie Ventures: focusing on energy and engineering</li>
+              <li>Financial Analysis Intern at Lummus Digital: built trading models and valuation work for a buyout</li>
+              <li>Data Science and Quantitative Research at FIRC: built ETF sentiment analysis programs for portfolio construction</li>
+              <li>Vice President Curriculums at Moneythink CMU: building a student run personal finance course</li>
+              <li>Financial Coordinator at FitYouUSA: Parkinson’s focused senior support and grant work in North Jersey</li>
             </ul>
           </div>
         </section>
       </div>
+
     </main>
 
     <footer class="site-footer">
-      <div>&copy; Sohan Chakravorty 2025</div>
+      <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <!-- Snoopy buddy -->
-    <div class="snoopy-floating">
-      <div class="snoopy-emoji">🐶</div>
-      <div class="bubble">
-        Remember hydration. Also, your variance is not your identity.
-      </div>
-    </div>
-
-    <!-- Theme script -->
+    <!-- THEME TOGGLE SCRIPT -->
     <script>
-      const btn = document.getElementById("theme-toggle");
-      function applyTheme() {
+      const themeBtn = document.getElementById("theme-toggle");
+      function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+        themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      btn.addEventListener("click", () => {
+      themeBtn.addEventListener("click", () => {
         document.documentElement.classList.toggle("light");
-        applyTheme();
+        applyThemeIcon();
       });
-      applyTheme();
+      applyThemeIcon();
+    </script>
+
+    <!-- TYPEWRITER SCRIPT -->
+    <script>
+      function runTypewriter(phrases) {
+        const el = document.getElementById("typewriter");
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let mode = "typing";
+        let pauseCounter = 0;
+
+        function tick() {
+          const currentPhrase = phrases[phraseIndex];
+
+          if (mode === "typing") {
+            charIndex++;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === currentPhrase.length) {
+              mode = "pausingAfterType";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "pausingAfterType") {
+            pauseCounter++;
+            el.textContent = currentPhrase + "▌";
+            if (pauseCounter > 20) {
+              if (phraseIndex === phrases.length - 1) {
+                mode = "done";
+              } else {
+                mode = "deleting";
+              }
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "deleting") {
+            charIndex--;
+            if (charIndex < 0) charIndex = 0;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === 0) {
+              mode = "pausingAfterDelete";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 80);
+            return;
+          }
+
+          if (mode === "pausingAfterDelete") {
+            pauseCounter++;
+            el.textContent = "▌";
+            if (pauseCounter > 8) {
+              phraseIndex++;
+              charIndex = 0;
+              mode = "typing";
+            }
+            setTimeout(tick, 120);
+            return;
+          }
+
+          if (mode === "done") {
+            el.textContent = currentPhrase;
+            el.classList.add("done");
+            return;
+          }
+        }
+
+        tick();
+      }
+
+      runTypewriter([
+        "Finance + StatML at CMU",
+        "I also really like Snoopy",
+        "Finance + StatML at CMU"
+      ]);
     </script>
   </body>
 </html>
