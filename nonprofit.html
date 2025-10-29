@@ -3,132 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Sohan Chakravorty • Nonprofit and Community Work</title>
+    <title>Sohan Chakravorty • Nonprofit</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- math float decorations -->
-    <div class="math-float" style="left:8%;top:22%;">
-      budget_t+1 = budget_t + grants - cost(programs)
-    </div>
-    <div class="math-float alt" style="left:72%;top:58%;">
-      impact = f( access, dignity )
+    <!-- soft finance background notes -->
+    <div class="bg-math-layer">
+      <div class="bg-math-block">
+        <div class="bg-math-label">program budget</div>
+        next = now + grants − cost(programs)
+      </div>
+      <div class="bg-math-block">
+        <div class="bg-math-label">transparency rule</div>
+        tell donors where every dollar went
+      </div>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav class="site-nav">
       <div class="nav-left">
-        <div class="brand">
-          <span>Sohan Chakravorty</span>
-          <span class="brand-pill">CMU Finance and ML</span>
+        <div class="brand-block">
+          <div class="brand-name">Sohan Chakravorty</div>
+          <div class="brand-line2">Finance + StatML, Carnegie Mellon University</div>
         </div>
+
         <div class="nav-links">
           <a href="index.html">About</a>
           <a href="internships.html">Internships</a>
           <a href="clubs.html">Clubs</a>
           <a href="nonprofit.html">Nonprofit</a>
+          <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
 
-      <div class="toggle-wrapper">
-        <button id="theme-toggle">Light Mode</button>
-      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
     </nav>
 
     <main class="page-wrapper">
+      <!-- HEADER -->
       <header class="page-header">
-        <div class="topline">
-          Access, health, culture
-          <span class="cmu-tag">Community Work</span>
+        <div class="header-left">
+          <div class="topline">
+            <span>access, health, culture</span>
+            <span class="cmu-tag">community</span>
+          </div>
+
+          <div class="page-title-row">
+            <h1 class="page-title">Nonprofit and Community Work</h1>
+            <div class="typewriter" id="typewriter"></div>
+          </div>
+
+          <div class="subtitle">
+            My work in finance isn't just trading models and discounted cash flows. It is also filing compliance paperwork, getting grant money for Parkinson’s support for seniors in New Jersey, making cultural events financially transparent, and creating a safe space for Bengali families. I treat money as infrastructure that holds people up.
+          </div>
+
+          <div class="badge-row">
+            <div class="badge">Parkinson’s and seniors</div>
+            <div class="badge">Bengali cultural work</div>
+            <div class="badge">Grant writing</div>
+            <div class="badge">Budget transparency</div>
+          </div>
         </div>
 
-        <h1 class="page-title">Nonprofit and Community Impact</h1>
-
-        <div class="subtitle">
-          I focus on financial access and dignity. This includes seniors dealing with Parkinson’s, Bengali cultural work, and financial literacy for students who are not usually in the room when money is explained. :contentReference[oaicite:3]{index=3}
-        </div>
-
-        <div class="badge-row">
-          <div class="badge">Grant Writing</div>
-          <div class="badge">Senior Health</div>
-          <div class="badge">Cultural Programming</div>
-          <div class="badge">Financial Transparency</div>
+        <div class="header-right">
+          <img src="snoopy_chill.png" alt="Snoopy chilling" />
+          <div class="caption">
+            money can be care work
+          </div>
         </div>
       </header>
 
-      <section class="section-card">
+      <!-- FitYouUSA -->
+      <section class="section-block">
         <div class="section-heading">
           <div>
             <span class="role-title">Financial Coordinator</span>
-            <span class="role-org">FitYouUSA (501(c)(3))</span>
+            <span class="role-org">FitYouUSA (501(c)(3)), New Jersey</span>
           </div>
           <div class="role-dates">Jul 2023 to Present</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>Filed founding paperwork for a 501(c)(3) and managed finances for government compliance.</li>
-            <li>Applied for more than 15 government grants and worked with the mayors of Dumont and Cresskill in New Jersey to support senior centers.</li>
-            <li>Helped grow the organization with more than 25 youth leaders, using table tennis as movement therapy and social connection for seniors with Parkinson’s.</li>
+            <li>Filed founding paperwork to register the nonprofit and managed finances to meet compliance standards</li>
+            <li>Applied for more than 15 government grants, working with local mayors to support senior centers in Dumont and Cresskill, New Jersey</li>
+            <li>Helped grow the organization to 25+ youth leaders, using table tennis as movement, engagement and therapy for seniors with Parkinson’s</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- North Jersey Bengali Association -->
+      <section class="section-block">
         <div class="section-heading">
           <div>
             <span class="role-title">Pricing Analyst and Creative Director</span>
-            <span class="role-org">North Jersey Bengali Association (501(c)(3))</span>
+            <span class="role-org">North Jersey Bengali Association (501(c)(3)), New Jersey</span>
           </div>
           <div class="role-dates">Aug 2022 to Present</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>Led finance for a cultural concert above 230,000 dollars in revenue.</li>
-            <li>Created a sponsorship strategy that generates more than 5,000 dollars every year.</li>
-            <li>Managed budgets and reported financials publicly so donors could see where money goes.</li>
-            <li>Designed promotion material that supports and celebrates Bengali American culture in North Jersey.</li>
+            <li>Led finance for a cultural concert netting $230,000+</li>
+            <li>Built a sponsorship strategy that brings in more than $5,000 yearly and keeps programming going</li>
+            <li>Managed budgets and publicly reported financials so donors and families could actually see where money went</li>
+            <li>Designed promotional materials to support and celebrate Bengali American culture</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- Why -->
+      <section class="section-block">
         <div class="section-heading">
           <div>Why This Matters To Me</div>
         </div>
         <div class="section-body">
           <p>
-            Finance is not just a spreadsheet. It is, can we afford to run another class for seniors with Parkinson’s, can we keep a cultural space alive for immigrant families, can we build something that survives after we graduate.
+            Finance decides which programs exist: Can we run one more table tennis session for seniors with Parkinson’s? Can we afford homemade Bengali fish at the next event? Can we make sure teenagers understand debt before they sign something that will follow them for a decade?
           </p>
           <p>
-            I learned to treat money as infrastructure that quietly holds people up.
+            My work is about teaching, resourcing and reducing gatekeeping. Knowing financial literacy should be a right, and using money properly is a moral obligation.
           </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>&copy; Sohan Chakravorty 2025</div>
+      <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <div class="snoopy-floating">
-      <div class="snoopy-emoji">🐶</div>
-      <div class="bubble">
-        Community is a balance sheet too.
-      </div>
-    </div>
-
+    <!-- THEME TOGGLE SCRIPT -->
     <script>
-      const btn = document.getElementById("theme-toggle");
-      function applyTheme() {
+      const themeBtn = document.getElementById("theme-toggle");
+      function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+        themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      btn.addEventListener("click", () => {
+      themeBtn.addEventListener("click", () => {
         document.documentElement.classList.toggle("light");
-        applyTheme();
+        applyThemeIcon();
       });
-      applyTheme();
+      applyThemeIcon();
+    </script>
+
+    <!-- TYPEWRITER SCRIPT -->
+    <script>
+      function runTypewriter(phrases) {
+        const el = document.getElementById("typewriter");
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let mode = "typing";
+        let pauseCounter = 0;
+
+        function tick() {
+          const currentPhrase = phrases[phraseIndex];
+
+          if (mode === "typing") {
+            charIndex++;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === currentPhrase.length) {
+              mode = "pausingAfterType";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "pausingAfterType") {
+            pauseCounter++;
+            el.textContent = currentPhrase + "▌";
+            if (pauseCounter > 20) {
+              if (phraseIndex === phrases.length - 1) {
+                mode = "done";
+              } else {
+                mode = "deleting";
+              }
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "deleting") {
+            charIndex--;
+            if (charIndex < 0) charIndex = 0;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === 0) {
+              mode = "pausingAfterDelete";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 80);
+            return;
+          }
+
+          if (mode === "pausingAfterDelete") {
+            pauseCounter++;
+            el.textContent = "▌";
+            if (pauseCounter > 8) {
+              phraseIndex++;
+              charIndex = 0;
+              mode = "typing";
+            }
+            setTimeout(tick, 120);
+            return;
+          }
+
+          if (mode === "done") {
+            el.textContent = currentPhrase;
+            el.classList.add("done");
+            return;
+          }
+        }
+
+        tick();
+      }
+
+      runTypewriter([
+        "Money is infrastructure",
+        "I file grant paperwork so seniors get care",
+        "Money is infrastructure"
+      ]);
     </script>
   </body>
 </html>
