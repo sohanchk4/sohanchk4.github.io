@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="page-transition">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">SC</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-text">Loading leadership...</div>
+    </div>
+
     <!-- soft finance background notes -->
-    <div class="bg-math-layer">
+    <div class="bg-math-layer" id="bgMath">
       <div class="bg-math-block">
         <div class="bg-math-label">compounding discipline</div>
         skill(t+1) = skill(t) · (1 + effort)
@@ -44,11 +53,6 @@
       <!-- HEADER -->
       <header class="page-header">
         <div class="header-left">
-          <div class="topline">
-            <span>teaching, competition, discipline</span>
-            <span class="cmu-tag">CMU</span>
-          </div>
-
           <div class="page-title-row">
             <h1 class="page-title">Clubs and Leadership</h1>
             <div class="typewriter" id="typewriter"></div>
@@ -59,16 +63,15 @@
           </div>
 
           <div class="badge-row">
-            <div class="badge">Moneythink CMU</div>
-            <div class="badge">DECA Top 10 Int’l</div>
-            <div class="badge">Model UN awards</div>
-            <div class="badge">National fencing</div>
-            <div class="badge">Table tennis coach</div>
+            <div class="badge">discipline travels</div>
+            <div class="badge">teaching is audit</div>
+            <div class="badge">coffee solves variance</div>
+            <div class="badge">confidence is learned</div>
           </div>
         </div>
 
         <div class="header-right">
-          <img src="snoopy_walk.png" alt="Snoopy walking" />
+          <img src="snoopy_walk.png" alt="Snoopy walking" loading="lazy" />
           <div class="caption">
             staying on task, allegedly
           </div>
@@ -85,11 +88,7 @@
           <div class="role-dates">Sept 2025 to Present</div>
         </div>
         <div class="section-body">
-          <ul>
-            <li>Leading student educators to teach practical personal finance without talking down to people</li>
-            <li>Partnering with high schools to run sessions on budgeting, debt, saving and agency</li>
-            <li>Preparing a student run personal finance course at CMU so this still exists after I graduate</li>
-          </ul>
+          <p>Leading student educators to teach practical personal finance without talking down to people. Partnering with high schools to run sessions on budgeting, debt, saving and agency. Preparing a student run personal finance course at CMU so this still exists after I graduate.</p>
         </div>
       </section>
 
@@ -139,78 +138,130 @@
       <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <!-- THEME TOGGLE SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
+      // LOADING SCREEN - Faster
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+          }
+        }, 1200);
+      });
+      
+      // Backup: Remove loading screen after window fully loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            loadingScreen.style.display = 'none';
+          }
+          window.scrollTo(0, 0);
+        }, 1500);
+      });
+
+      // PARALLAX EFFECT
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            const scrolled = window.pageYOffset;
+            const bgMath = document.getElementById('bgMath');
+            if (bgMath) {
+              bgMath.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // THEME TOGGLE
       const themeBtn = document.getElementById("theme-toggle");
+      
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
         themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      themeBtn.addEventListener("click", () => {
+      
+      themeBtn.addEventListener("click", function() {
         document.documentElement.classList.toggle("light");
         applyThemeIcon();
+        localStorage.setItem('theme', document.documentElement.classList.contains("light") ? 'light' : 'dark');
       });
+      
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+      }
       applyThemeIcon();
-    </script>
 
-    <!-- TYPEWRITER SCRIPT -->
-    <script>
+      // ENHANCED TYPEWRITER
       function runTypewriter(phrases) {
         const el = document.getElementById("typewriter");
+        if (!el) return;
+        
         let phraseIndex = 0;
         let charIndex = 0;
         let mode = "typing";
         let pauseCounter = 0;
+
+        function getTypingSpeed() {
+          const currentChar = phrases[phraseIndex][charIndex];
+          if (currentChar === ' ') return 50;
+          if ([',', '.', '!'].includes(currentChar)) return 200;
+          return 80 + Math.random() * 70;
+        }
 
         function tick() {
           const currentPhrase = phrases[phraseIndex];
 
           if (mode === "typing") {
             charIndex++;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === currentPhrase.length) {
               mode = "pausingAfterType";
               pauseCounter = 0;
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, getTypingSpeed());
             return;
           }
 
           if (mode === "pausingAfterType") {
             pauseCounter++;
-            el.textContent = currentPhrase + "▌";
-            if (pauseCounter > 20) {
+            if (pauseCounter > 25) {
               if (phraseIndex === phrases.length - 1) {
                 mode = "done";
               } else {
                 mode = "deleting";
               }
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, 100);
             return;
           }
 
           if (mode === "deleting") {
             charIndex--;
             if (charIndex < 0) charIndex = 0;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === 0) {
               mode = "pausingAfterDelete";
               pauseCounter = 0;
             }
-            setTimeout(tick, 80);
+            setTimeout(tick, 40);
             return;
           }
 
           if (mode === "pausingAfterDelete") {
             pauseCounter++;
-            el.textContent = "▌";
-            if (pauseCounter > 8) {
+            if (pauseCounter > 10) {
               phraseIndex++;
               charIndex = 0;
               mode = "typing";
             }
-            setTimeout(tick, 120);
+            setTimeout(tick, 100);
             return;
           }
 
@@ -226,9 +277,45 @@
 
       runTypewriter([
         "Discipline is a transferable asset",
-        "I coach table tennis for Parkinson’s seniors",
+        "I coach table tennis for Parkinson's seniors",
         "Discipline is a transferable asset"
       ]);
+
+      // SCROLL-TRIGGERED FADE-INS
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('fade-in');
+            }, index * 50);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-block').forEach(function(section) {
+        observer.observe(section);
+      });
+
+      // LAZY LOAD IMAGES
+      const imageObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.classList.add('loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+        imageObserver.observe(img);
+      });
     </script>
   </body>
 </html>

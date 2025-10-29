@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="page-transition">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">SC</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-text">Loading community work...</div>
+    </div>
+
     <!-- soft finance background notes -->
-    <div class="bg-math-layer">
+    <div class="bg-math-layer" id="bgMath">
       <div class="bg-math-block">
         <div class="bg-math-label">program budget</div>
         next = now + grants − cost(programs)
@@ -44,30 +53,25 @@
       <!-- HEADER -->
       <header class="page-header">
         <div class="header-left">
-          <div class="topline">
-            <span>access, health, culture</span>
-            <span class="cmu-tag">community</span>
-          </div>
-
           <div class="page-title-row">
             <h1 class="page-title">Nonprofit and Community Work</h1>
             <div class="typewriter" id="typewriter"></div>
           </div>
 
           <div class="subtitle">
-            My work in finance isn't just trading models and discounted cash flows. It is also filing compliance paperwork, getting grant money for Parkinson’s support for seniors in New Jersey, making cultural events financially transparent, and creating a safe space for Bengali families. I treat money as infrastructure that holds people up.
+            My work in finance isn't just trading models and discounted cash flows. It is also filing compliance paperwork, getting grant money for Parkinson's support for seniors in New Jersey, making cultural events financially transparent, and creating a safe space for Bengali families. I treat money as infrastructure that holds people up.
           </div>
 
           <div class="badge-row">
-            <div class="badge">Parkinson’s and seniors</div>
-            <div class="badge">Bengali cultural work</div>
-            <div class="badge">Grant writing</div>
-            <div class="badge">Budget transparency</div>
+            <div class="badge">money is infrastructure</div>
+            <div class="badge">access is the point</div>
+            <div class="badge">transparency builds trust</div>
+            <div class="badge">impact is funded, not wished for</div>
           </div>
         </div>
 
         <div class="header-right">
-          <img src="snoopy_chill.png" alt="Snoopy chilling" />
+          <img src="snoopy_chill.png" alt="Snoopy chilling" loading="lazy" />
           <div class="caption">
             money can be care work
           </div>
@@ -84,11 +88,7 @@
           <div class="role-dates">Jul 2023 to Present</div>
         </div>
         <div class="section-body">
-          <ul>
-            <li>Filed founding paperwork to register the nonprofit and managed finances to meet compliance standards</li>
-            <li>Applied for more than 15 government grants, working with local mayors to support senior centers in Dumont and Cresskill, New Jersey</li>
-            <li>Helped grow the organization to 25+ youth leaders, using table tennis as movement, engagement and therapy for seniors with Parkinson’s</li>
-          </ul>
+          <p>Filed founding paperwork to register the nonprofit and managed finances to meet compliance standards. Applied for more than 15 government grants, working with local mayors to support senior centers in Dumont and Cresskill, New Jersey. Helped grow the organization to 25+ youth leaders, using table tennis as movement, engagement and therapy for seniors with Parkinson's.</p>
         </div>
       </section>
 
@@ -102,12 +102,7 @@
           <div class="role-dates">Aug 2022 to Present</div>
         </div>
         <div class="section-body">
-          <ul>
-            <li>Led finance for a cultural concert netting $230,000+</li>
-            <li>Built a sponsorship strategy that brings in more than $5,000 yearly and keeps programming going</li>
-            <li>Managed budgets and publicly reported financials so donors and families could actually see where money went</li>
-            <li>Designed promotional materials to support and celebrate Bengali American culture</li>
-          </ul>
+          <p>Led finance for a cultural concert netting $230,000+. Built a sponsorship strategy that brings in more than $5,000 yearly and keeps programming going. Managed budgets and publicly reported financials so donors and families could actually see where money went. Designed promotional materials to support and celebrate Bengali American culture.</p>
         </div>
       </section>
 
@@ -117,12 +112,8 @@
           <div>Why This Matters To Me</div>
         </div>
         <div class="section-body">
-          <p>
-            Finance decides which programs exist: Can we run one more table tennis session for seniors with Parkinson’s? Can we afford homemade Bengali fish at the next event? Can we make sure teenagers understand debt before they sign something that will follow them for a decade?
-          </p>
-          <p>
-            My work is about teaching, resourcing and reducing gatekeeping. Knowing financial literacy should be a right, and using money properly is a moral obligation.
-          </p>
+          <p>Finance decides which programs exist: Can we run one more table tennis session for seniors with Parkinson's? Can we afford homemade Bengali fish at the next event? Can we make sure teenagers understand debt before they sign something that will follow them for a decade?</p>
+          <p>My work is about teaching, resourcing and reducing gatekeeping. Knowing financial literacy should be a right, and using money properly is a moral obligation.</p>
         </div>
       </section>
     </main>
@@ -131,78 +122,130 @@
       <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <!-- THEME TOGGLE SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
+      // LOADING SCREEN - Faster
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+          }
+        }, 1200);
+      });
+      
+      // Backup: Remove loading screen after window fully loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            loadingScreen.style.display = 'none';
+          }
+          window.scrollTo(0, 0);
+        }, 1500);
+      });
+
+      // PARALLAX EFFECT
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            const scrolled = window.pageYOffset;
+            const bgMath = document.getElementById('bgMath');
+            if (bgMath) {
+              bgMath.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // THEME TOGGLE
       const themeBtn = document.getElementById("theme-toggle");
+      
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
         themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      themeBtn.addEventListener("click", () => {
+      
+      themeBtn.addEventListener("click", function() {
         document.documentElement.classList.toggle("light");
         applyThemeIcon();
+        localStorage.setItem('theme', document.documentElement.classList.contains("light") ? 'light' : 'dark');
       });
+      
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+      }
       applyThemeIcon();
-    </script>
 
-    <!-- TYPEWRITER SCRIPT -->
-    <script>
+      // ENHANCED TYPEWRITER
       function runTypewriter(phrases) {
         const el = document.getElementById("typewriter");
+        if (!el) return;
+        
         let phraseIndex = 0;
         let charIndex = 0;
         let mode = "typing";
         let pauseCounter = 0;
+
+        function getTypingSpeed() {
+          const currentChar = phrases[phraseIndex][charIndex];
+          if (currentChar === ' ') return 50;
+          if ([',', '.', '!'].includes(currentChar)) return 200;
+          return 80 + Math.random() * 70;
+        }
 
         function tick() {
           const currentPhrase = phrases[phraseIndex];
 
           if (mode === "typing") {
             charIndex++;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === currentPhrase.length) {
               mode = "pausingAfterType";
               pauseCounter = 0;
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, getTypingSpeed());
             return;
           }
 
           if (mode === "pausingAfterType") {
             pauseCounter++;
-            el.textContent = currentPhrase + "▌";
-            if (pauseCounter > 20) {
+            if (pauseCounter > 25) {
               if (phraseIndex === phrases.length - 1) {
                 mode = "done";
               } else {
                 mode = "deleting";
               }
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, 100);
             return;
           }
 
           if (mode === "deleting") {
             charIndex--;
             if (charIndex < 0) charIndex = 0;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === 0) {
               mode = "pausingAfterDelete";
               pauseCounter = 0;
             }
-            setTimeout(tick, 80);
+            setTimeout(tick, 40);
             return;
           }
 
           if (mode === "pausingAfterDelete") {
             pauseCounter++;
-            el.textContent = "▌";
-            if (pauseCounter > 8) {
+            if (pauseCounter > 10) {
               phraseIndex++;
               charIndex = 0;
               mode = "typing";
             }
-            setTimeout(tick, 120);
+            setTimeout(tick, 100);
             return;
           }
 
@@ -221,6 +264,42 @@
         "I file grant paperwork so seniors get care",
         "Money is infrastructure"
       ]);
+
+      // SCROLL-TRIGGERED FADE-INS
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('fade-in');
+            }, index * 50);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-block').forEach(function(section) {
+        observer.observe(section);
+      });
+
+      // LAZY LOAD IMAGES
+      const imageObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.classList.add('loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+        imageObserver.observe(img);
+      });
     </script>
   </body>
 </html>

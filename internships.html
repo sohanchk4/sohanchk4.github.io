@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="page-transition">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">SC</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-text">Loading experience...</div>
+    </div>
+
     <!-- soft finance background notes -->
-    <div class="bg-math-layer">
+    <div class="bg-math-layer" id="bgMath">
       <div class="bg-math-block">
         <div class="bg-math-label">DCF valuation</div>
         V = Σ CFₜ / (1+r)ᵗ
@@ -45,11 +54,6 @@
       <!-- HEADER -->
       <header class="page-header">
         <div class="header-left">
-          <div class="topline">
-            <span>valuation, trading, research</span>
-            <span class="cmu-tag">CMU</span>
-          </div>
-
           <div class="page-title-row">
             <h1 class="page-title">Internships and Professional Work</h1>
             <div class="typewriter" id="typewriter"></div>
@@ -60,72 +64,94 @@
           </div>
 
           <div class="badge-row">
-            <div class="badge">Growth equity</div>
-            <div class="badge">DCF and goodwill valuation</div>
-            <div class="badge">ETF analytics</div>
-            <div class="badge">Algorithmic trading</div>
+            <div class="badge">return > narrative</div>
+            <div class="badge">growth > hype</div>
+            <div class="badge">value → clarity</div>
+            <div class="badge">risk is a price, not a vibe</div>
           </div>
         </div>
 
         <div class="header-right">
-          <img src="snoopy_walk.png" alt="Snoopy walking" />
+          <img src="snoopy_walk.png" alt="Snoopy walking" loading="lazy" />
           <div class="caption">
-            walking through cap tables like it’s normal
+            walking through cap tables like it's normal
           </div>
         </div>
       </header>
 
-      <!-- Scottie Ventures -->
+      <!-- INTERACTIVE TIMELINE -->
       <section class="section-block">
         <div class="section-heading">
-          <div>
-            <span class="role-title">Growth Equity Analyst</span>
-            <span class="role-org">Scottie Ventures, Carnegie Mellon University</span>
+          <div>Professional Timeline</div>
+          <div class="muted">Click to expand</div>
+        </div>
+        
+        <div class="timeline">
+          <!-- Scottie Ventures -->
+          <div class="timeline-item" data-timeline="scottie">
+            <div class="timeline-icon">SV</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-title">Growth Equity Analyst</div>
+                  <div class="timeline-org">Scottie Ventures, Carnegie Mellon University</div>
+                </div>
+                <div class="timeline-dates">Sept 2025 - Present</div>
+              </div>
+              <div class="timeline-expand-hint">Click for details</div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Evaluating startups by conducting market research, analyzing cap tables, developing investment theses and projecting future returns.</li>
+                  <li>Focusing on engineering and energy sector ideas, identifying promising technical innovations and timing.</li>
+                  <li>Connecting valuation to real world adoption, not just hype.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="role-dates">Sept 2025 to Present</div>
-        </div>
-        <div class="section-body">
-          <ul>
-            <li>Evaluating startups by conducting market research, analyzing cap tables, developing investment theses and projecting future returns.</li>
-            <li>Focusing on engineering and energy sector ideas, identifying promising technical innovations and timing.</li>
-            <li>Connecting valuation to real world adoption, not just hype.</li>
-          </ul>
-        </div>
-      </section>
 
-      <!-- Lummus Digital -->
-      <section class="section-block">
-        <div class="section-heading">
-          <div>
-            <span class="role-title">Financial Analysis Intern</span>
-            <span class="role-org">Lummus Digital, Bloomfield NJ and Manhattan NY</span>
+          <!-- Lummus Digital -->
+          <div class="timeline-item" data-timeline="lummus">
+            <div class="timeline-icon">LD</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-title">Financial Analysis Intern</div>
+                  <div class="timeline-org">Lummus Digital, Bloomfield NJ and Manhattan NY</div>
+                </div>
+                <div class="timeline-dates">Sept 2024 - June 2025</div>
+              </div>
+              <div class="timeline-expand-hint">Click for details</div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Built algorithmic trading models that historically outperformed market benchmarks in backtesting.</li>
+                  <li>Performed DCF, relative valuation and goodwill valuation work that was actually used in an international buyout process.</li>
+                  <li>Presented algorithms directly to executives and tuned performance based on their feedback.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="role-dates">Sept 2024 to June 2025</div>
-        </div>
-        <div class="section-body">
-          <ul>
-            <li>Built algorithmic trading models that historically outperformed market benchmarks in backtesting.</li>
-            <li>Performed DCF, relative valuation and goodwill valuation work that was actually used in an international buyout process.</li>
-            <li>Presented algorithms directly to executives and tuned performance based on their feedback.</li>
-          </ul>
-        </div>
-      </section>
 
-      <!-- FIRC -->
-      <section class="section-block">
-        <div class="section-heading">
-          <div>
-            <span class="role-title">Data Science and Quantitative Research Intern</span>
-            <span class="role-org">FinTech Innovation and Research Center (FIRC), Boston MA (virtual)</span>
+          <!-- FIRC -->
+          <div class="timeline-item" data-timeline="firc">
+            <div class="timeline-icon">FR</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-title">Data Science and Quantitative Research Intern</div>
+                  <div class="timeline-org">FinTech Innovation and Research Center (FIRC), Boston MA</div>
+                </div>
+                <div class="timeline-dates">Sept 2024 - June 2025</div>
+              </div>
+              <div class="timeline-expand-hint">Click for details</div>
+              <div class="timeline-details">
+                <ul>
+                  <li>Built sentiment analysis on markets using NLP to forecast industry trends.</li>
+                  <li>Oversaw models that read ETF whitepapers to produce sector recommendations and position ideas.</li>
+                  <li>Constructed a diversified ETF portfolio using those signals.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="role-dates">Sept 2024 to June 2025</div>
-        </div>
-        <div class="section-body">
-          <ul>
-            <li>Built sentiment analysis on markets using NLP to forecast industry trends.</li>
-            <li>Oversaw models that read ETF whitepapers to produce sector recommendations and position ideas.</li>
-            <li>Constructed a diversified ETF portfolio using those signals.</li>
-          </ul>
         </div>
       </section>
 
@@ -135,11 +161,7 @@
           <div>Technical Stack and Capabilities</div>
         </div>
         <div class="section-body">
-          <ul>
-            <li>DCF, GAAP accounting, financial statement creation and analysis.</li>
-            <li>Python, pandas, NumPy, Matplotlib, SQL, Java, Jupyter Notebook, Docker, Bloomberg Terminal.</li>
-            <li>Portfolio construction, amortization logic and early stage company evaluation.</li>
-          </ul>
+          <p>DCF, GAAP accounting, financial statement creation and analysis. Python, pandas, NumPy, Matplotlib, SQL, Java, Jupyter Notebook, Docker, Bloomberg Terminal. Portfolio construction, amortization logic and early stage company evaluation.</p>
         </div>
       </section>
     </main>
@@ -148,78 +170,130 @@
       <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <!-- THEME TOGGLE SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
+      // LOADING SCREEN - Faster
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+          }
+        }, 1200);
+      });
+      
+      // Backup: Remove loading screen after window fully loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            loadingScreen.style.display = 'none';
+          }
+          window.scrollTo(0, 0);
+        }, 1500);
+      });
+
+      // PARALLAX EFFECT
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            const scrolled = window.pageYOffset;
+            const bgMath = document.getElementById('bgMath');
+            if (bgMath) {
+              bgMath.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // THEME TOGGLE
       const themeBtn = document.getElementById("theme-toggle");
+      
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
         themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      themeBtn.addEventListener("click", () => {
+      
+      themeBtn.addEventListener("click", function() {
         document.documentElement.classList.toggle("light");
         applyThemeIcon();
+        localStorage.setItem('theme', document.documentElement.classList.contains("light") ? 'light' : 'dark');
       });
+      
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+      }
       applyThemeIcon();
-    </script>
 
-    <!-- TYPEWRITER SCRIPT -->
-    <script>
+      // ENHANCED TYPEWRITER
       function runTypewriter(phrases) {
         const el = document.getElementById("typewriter");
+        if (!el) return;
+        
         let phraseIndex = 0;
         let charIndex = 0;
         let mode = "typing";
         let pauseCounter = 0;
+
+        function getTypingSpeed() {
+          const currentChar = phrases[phraseIndex][charIndex];
+          if (currentChar === ' ') return 50;
+          if ([',', '.', '!'].includes(currentChar)) return 200;
+          return 80 + Math.random() * 70;
+        }
 
         function tick() {
           const currentPhrase = phrases[phraseIndex];
 
           if (mode === "typing") {
             charIndex++;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === currentPhrase.length) {
               mode = "pausingAfterType";
               pauseCounter = 0;
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, getTypingSpeed());
             return;
           }
 
           if (mode === "pausingAfterType") {
             pauseCounter++;
-            el.textContent = currentPhrase + "▌";
-            if (pauseCounter > 20) {
+            if (pauseCounter > 25) {
               if (phraseIndex === phrases.length - 1) {
                 mode = "done";
               } else {
                 mode = "deleting";
               }
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, 100);
             return;
           }
 
           if (mode === "deleting") {
             charIndex--;
             if (charIndex < 0) charIndex = 0;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === 0) {
               mode = "pausingAfterDelete";
               pauseCounter = 0;
             }
-            setTimeout(tick, 80);
+            setTimeout(tick, 40);
             return;
           }
 
           if (mode === "pausingAfterDelete") {
             pauseCounter++;
-            el.textContent = "▌";
-            if (pauseCounter > 8) {
+            if (pauseCounter > 10) {
               phraseIndex++;
               charIndex = 0;
               mode = "typing";
             }
-            setTimeout(tick, 120);
+            setTimeout(tick, 100);
             return;
           }
 
@@ -238,6 +312,59 @@
         "I will absolutely open Excel at 2am",
         "I build and test models that try to price risk"
       ]);
+
+      // TIMELINE EXPAND/COLLAPSE
+      document.querySelectorAll('.timeline-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+          const isExpanded = this.classList.contains('expanded');
+          
+          // Close all other items
+          document.querySelectorAll('.timeline-item').forEach(function(otherItem) {
+            otherItem.classList.remove('expanded');
+          });
+          
+          // Toggle current item
+          if (!isExpanded) {
+            this.classList.add('expanded');
+          }
+        });
+      });
+
+      // SCROLL-TRIGGERED FADE-INS
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('fade-in');
+            }, index * 50);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-block').forEach(function(section) {
+        observer.observe(section);
+      });
+
+      // LAZY LOAD IMAGES
+      const imageObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.classList.add('loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+        imageObserver.observe(img);
+      });
     </script>
   </body>
 </html>

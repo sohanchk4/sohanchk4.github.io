@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="page-transition">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">SC</div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-text">Loading portfolio...</div>
+    </div>
+
     <!-- soft finance background notes, left column under nav -->
-    <div class="bg-math-layer">
+    <div class="bg-math-layer" id="bgMath">
       <div class="bg-math-block">
         <div class="bg-math-label">expected return</div>
         E[r] = Σ pᵢ · rᵢ
@@ -46,11 +55,6 @@
       <header class="page-header">
         <!-- left side -->
         <div class="header-left">
-          <div class="topline">
-            <span>capital, data, people</span>
-            <span class="cmu-tag">CMU</span>
-          </div>
-
           <div class="page-title-row">
             <h1 class="page-title">Hi, I'm Sohan Chakravorty.</h1>
             <div class="typewriter" id="typewriter"></div>
@@ -61,17 +65,16 @@
           </div>
 
           <div class="badge-row">
-            <div class="badge">DCF and valuation</div>
-            <div class="badge">ETF sentiment research</div>
-            <div class="badge">Algorithmic trading</div>
-            <div class="badge">Financial literacy education</div>
-            <div class="badge">Community work in North Jersey</div>
+            <div class="badge">learn fast, stay curious</div>
+            <div class="badge">money is infrastructure</div>
+            <div class="badge">precision is care</div>
+            <div class="badge">never underestimate snoopy</div>
           </div>
         </div>
 
         <!-- right side -->
         <div class="header-right">
-          <img src="snoopy_chill.png" alt="Snoopy chilling" />
+          <img src="snoopy_chill.png" alt="Snoopy chilling" loading="lazy" />
           <div class="caption">
             Snoopy is here because I like Snoopy. No deeper branding strategy.
           </div>
@@ -102,7 +105,7 @@
           <div class="section-body">
             <p>
               <span class="role-title">Carnegie Mellon University</span><br/>
-              BS, Business Admin (Finance) + BS, Statistics and Machine Learning <br>GPA: 4.0/4.0
+              BS, Business Administration (Finance) + <br>BS, Statistics and Machine Learning <br>GPA: 4.0/4.0
             </p>
             <p class="role-dates">
               Relevant coursework: Multivariable Calculus, Accelerated Microeconomics, Accounting
@@ -128,6 +131,96 @@
           </div>
         </section>
       </div>
+
+      <!-- TECH STACK ICONS -->
+      <section class="section-block">
+        <div class="section-heading">
+          <div>Tech Stack</div>
+        </div>
+        <div class="section-body">
+          <div class="tech-stack-grid">
+            <div class="tech-icon">
+              <span class="tech-icon-symbol">🐍</span>
+              <div class="tech-icon-name">Python</div>
+              <div class="tech-icon-tooltip">Used for algo trading models & NLP</div>
+            </div>
+            <div class="tech-icon">
+              <span class="tech-icon-symbol">📊</span>
+              <div class="tech-icon-name">Excel</div>
+              <div class="tech-icon-tooltip">Financial modeling & DCF analysis</div>
+            </div>
+            <div class="tech-icon">
+              <span class="tech-icon-symbol">🗄️</span>
+              <div class="tech-icon-name">SQL</div>
+              <div class="tech-icon-tooltip">Data queries & analysis</div>
+            </div>
+            <div class="tech-icon">
+              <span class="tech-icon-symbol">📈</span>
+              <div class="tech-icon-name">Bloomberg</div>
+              <div class="tech-icon-tooltip">Market data & terminal analysis</div>
+            </div>
+            <div class="tech-icon">
+              <span class="tech-icon-symbol">☕</span>
+              <div class="tech-icon-name">Java</div>
+              <div class="tech-icon-tooltip">Object-oriented programming</div>
+            </div>
+            <div class="tech-icon">
+              <span class="tech-icon-symbol">🐳</span>
+              <div class="tech-icon-name">Docker</div>
+              <div class="tech-icon-tooltip">Containerization & deployment</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS IN ACTION -->
+      <section class="section-block">
+        <div class="section-heading">
+          <div>Skills in Action</div>
+        </div>
+        <div class="section-body">
+          <div class="skills-in-action">
+            <div class="skill-project-link">
+              <div class="skill-project-info">
+                <div class="skill-project-name">Algorithmic Trading Models</div>
+                <div class="skill-project-desc">Built models that historically outperformed market benchmarks using Python, pandas, and quantitative analysis</div>
+                <div class="skill-project-tags">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">Backtesting</span>
+                  <span class="skill-tag">Portfolio Optimization</span>
+                </div>
+              </div>
+              <div class="skill-project-arrow">→</div>
+            </div>
+
+            <div class="skill-project-link">
+              <div class="skill-project-info">
+                <div class="skill-project-name">ETF Sentiment Analysis</div>
+                <div class="skill-project-desc">NLP algorithms to analyze ETF whitepapers and generate sector recommendations</div>
+                <div class="skill-project-tags">
+                  <span class="skill-tag">NLP</span>
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">Portfolio Construction</span>
+                </div>
+              </div>
+              <div class="skill-project-arrow">→</div>
+            </div>
+
+            <div class="skill-project-link">
+              <div class="skill-project-info">
+                <div class="skill-project-name">International Buyout Valuation</div>
+                <div class="skill-project-desc">Performed DCF, relative valuation, and goodwill analysis for international company acquisition</div>
+                <div class="skill-project-tags">
+                  <span class="skill-tag">DCF</span>
+                  <span class="skill-tag">Excel</span>
+                  <span class="skill-tag">GAAP</span>
+                </div>
+              </div>
+              <div class="skill-project-arrow">→</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="grid-2">
         <!-- CONTACT -->
@@ -155,7 +248,7 @@
               <li>Financial Analysis Intern at Lummus Digital: built trading models and valuation work for a buyout</li>
               <li>Data Science and Quantitative Research at FIRC: built ETF sentiment analysis programs for portfolio construction</li>
               <li>Vice President Curriculums at Moneythink CMU: building a student run personal finance course</li>
-              <li>Financial Coordinator at FitYouUSA: Parkinson’s focused senior support and grant work in North Jersey</li>
+              <li>Financial Coordinator at FitYouUSA: Parkinson's focused senior support and grant work in North Jersey</li>
             </ul>
           </div>
         </section>
@@ -167,22 +260,68 @@
       <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <!-- THEME TOGGLE SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
+      // LOADING SCREEN - Faster
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+          }
+        }, 1200);
+      });
+      
+      // Backup: Remove loading screen after window fully loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loadingScreen');
+          if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            loadingScreen.style.display = 'none';
+          }
+          window.scrollTo(0, 0);
+        }, 1500);
+      });
+
+      // PARALLAX EFFECT
+      let ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            const scrolled = window.pageYOffset;
+            const bgMath = document.getElementById('bgMath');
+            if (bgMath) {
+              bgMath.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // THEME TOGGLE
       const themeBtn = document.getElementById("theme-toggle");
+      
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
         themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      themeBtn.addEventListener("click", () => {
+      
+      themeBtn.addEventListener("click", function() {
         document.documentElement.classList.toggle("light");
         applyThemeIcon();
+        localStorage.setItem('theme', document.documentElement.classList.contains("light") ? 'light' : 'dark');
       });
+      
+      // Load saved theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+      }
       applyThemeIcon();
-    </script>
 
-    <!-- TYPEWRITER SCRIPT -->
-    <script>
+      // ENHANCED TYPEWRITER with variable speeds
       function runTypewriter(phrases) {
         const el = document.getElementById("typewriter");
         let phraseIndex = 0;
@@ -190,55 +329,60 @@
         let mode = "typing";
         let pauseCounter = 0;
 
+        function getTypingSpeed() {
+          const currentChar = phrases[phraseIndex][charIndex];
+          if (currentChar === ' ') return 50;
+          if ([',', '.', '!'].includes(currentChar)) return 200;
+          return 80 + Math.random() * 70;
+        }
+
         function tick() {
           const currentPhrase = phrases[phraseIndex];
 
           if (mode === "typing") {
             charIndex++;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === currentPhrase.length) {
               mode = "pausingAfterType";
               pauseCounter = 0;
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, getTypingSpeed());
             return;
           }
 
           if (mode === "pausingAfterType") {
             pauseCounter++;
-            el.textContent = currentPhrase + "▌";
-            if (pauseCounter > 20) {
+            if (pauseCounter > 25) {
               if (phraseIndex === phrases.length - 1) {
                 mode = "done";
               } else {
                 mode = "deleting";
               }
             }
-            setTimeout(tick, 150);
+            setTimeout(tick, 100);
             return;
           }
 
           if (mode === "deleting") {
             charIndex--;
             if (charIndex < 0) charIndex = 0;
-            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            el.textContent = currentPhrase.slice(0, charIndex);
             if (charIndex === 0) {
               mode = "pausingAfterDelete";
               pauseCounter = 0;
             }
-            setTimeout(tick, 80);
+            setTimeout(tick, 40);
             return;
           }
 
           if (mode === "pausingAfterDelete") {
             pauseCounter++;
-            el.textContent = "▌";
-            if (pauseCounter > 8) {
+            if (pauseCounter > 10) {
               phraseIndex++;
               charIndex = 0;
               mode = "typing";
             }
-            setTimeout(tick, 120);
+            setTimeout(tick, 100);
             return;
           }
 
@@ -257,6 +401,56 @@
         "I also really like Snoopy",
         "Finance + StatML at CMU"
       ]);
+
+      // SCROLL-TRIGGERED FADE-INS
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('fade-in');
+            }, index * 50);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-block').forEach(function(section) {
+        observer.observe(section);
+      });
+
+      // LAZY LOAD IMAGES
+      const imageObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.classList.add('loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+        imageObserver.observe(img);
+      });
+
+      // SMOOTH SCROLL for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
