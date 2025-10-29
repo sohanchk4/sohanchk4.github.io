@@ -4,6 +4,7 @@
    Light mode is activated by adding .light
    to the <html> element.
    ========================================= */
+   
 
 :root {
   --bg-color: #000000;
