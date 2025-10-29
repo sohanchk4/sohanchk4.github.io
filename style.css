@@ -188,7 +188,7 @@ body::after {
 
 :root.light .bg-math-layer {
   color: var(--text-main);
-  opacity: 0.25;
+  opacity: 0.12;
 }
 
 /* =========================================
