@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sohan Chakravorty • Internships & Finance Work</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+      <div class="nav-left">
+        <div class="brand">Sohan Chakravorty</div>
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="internships.html">Internships</a>
+          <a href="clubs.html">Clubs</a>
+          <a href="nonprofit.html">Nonprofit</a>
+        </div>
+      </div>
+
+      <div class="toggle-wrapper">
+        <button id="theme-toggle">Light Mode</button>
+      </div>
+    </nav>
+
+    <main class="page-wrapper">
+      <header class="page-header">
+        <div class="topline">Markets • Valuation • Research</div>
+        <h1 class="page-title">Internships & Professional Experience</h1>
+        <div class="subtitle">
+          I work across public markets, data-driven investing, and early-stage equity. My focus: finding value and telling the story with numbers.
+        </div>
+      </header>
+
+      <!-- Scottie Ventures -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <span class="role-title">Growth Equity Analyst</span>
+            <span class="role-org">@ Scottie Ventures • Carnegie Mellon</span>
+          </div>
+          <div class="role-dates">Sept 2025 – Present</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Builds investment theses on engineering and energy startups.</li>
+            <li>Analyzes cap tables, estimates valuations, and projects returns for potential investments.</li>
+            <li>Performs deep market research to identify “why now” insights for new technologies.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Lummus Digital -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <span class="role-title">Financial Analysis Intern</span>
+            <span class="role-org">@ Lummus Digital</span>
+          </div>
+          <div class="role-dates">Sept 2024 – June 2025</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Created algorithmic trading models that historically outperformed the market.</li>
+            <li>Built valuation work: DCF, relative valuation, goodwill analysis for an international buyout.</li>
+            <li>Presented strategy and performance directly to executives, iterating on feedback.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FIRC -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <span class="role-title">Data Science & Quantitative Research Intern</span>
+            <span class="role-org">@ FinTech Innovation & Research Center (FIRC)</span>
+          </div>
+          <div class="role-dates">Sept 2024 – June 2025</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Ran NLP-driven sentiment analysis on markets to forecast trends.</li>
+            <li>Automated reading of ETF whitepapers and surfaced sector recommendations.</li>
+            <li>Constructed a diversified ETF portfolio using those signals.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <div>Technical Stack</div>
+        </div>
+        <div class="section-body">
+          <div class="badge-row">
+            <div class="badge">Python</div>
+            <div class="badge">pandas</div>
+            <div class="badge">NumPy</div>
+            <div class="badge">Matplotlib</div>
+            <div class="badge">SQL</div>
+            <div class="badge">Bloomberg Terminal</div>
+            <div class="badge">DCF / Valuation</div>
+            <div class="badge">GAAP Accounting</div>
+            <div class="badge">Portfolio Construction</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; Sohan Chakravorty 2025</div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("theme-toggle");
+      function applyTheme() {
+        const isLight = document.documentElement.classList.contains("light");
+        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+      }
+      btn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("light");
+        applyTheme();
+      });
+      applyTheme();
+    </script>
+  </body>
+</html>
