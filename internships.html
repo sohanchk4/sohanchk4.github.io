@@ -3,156 +3,241 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Sohan Chakravorty • Internships and Finance Work</title>
+    <title>Sohan Chakravorty • Internships</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- math float decorations -->
-    <div class="math-float" style="left:10%;top:25%;">
-      P(V) = Σ cashflow_t / (1+r)^t
-    </div>
-    <div class="math-float alt" style="left:65%;top:70%;">
-      μ - λσ²  → portfolio objective
-    </div>
-    <div class="math-float" style="left:80%;top:15%;">
-      cap table ⇢ dilution ⇢ IRR
+    <!-- soft finance background notes -->
+    <div class="bg-math-layer">
+      <div class="bg-math-block">
+        <div class="bg-math-label">DCF valuation</div>
+        V = Σ CFₜ / (1+r)ᵗ
+      </div>
+      <div class="bg-math-block">
+        <div class="bg-math-label">deal math</div>
+        find r such that NPV = 0
+        (that r is IRR)
+      </div>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- NAV -->
     <nav class="site-nav">
       <div class="nav-left">
-        <div class="brand">
-          <span>Sohan Chakravorty</span>
-          <span class="brand-pill">CMU Finance and ML</span>
+        <div class="brand-block">
+          <div class="brand-name">Sohan Chakravorty</div>
+          <div class="brand-line2">Finance + StatML, Carnegie Mellon University</div>
         </div>
+
         <div class="nav-links">
           <a href="index.html">About</a>
           <a href="internships.html">Internships</a>
           <a href="clubs.html">Clubs</a>
           <a href="nonprofit.html">Nonprofit</a>
+          <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
 
-      <div class="toggle-wrapper">
-        <button id="theme-toggle">Light Mode</button>
-      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
     </nav>
 
     <main class="page-wrapper">
+      <!-- HEADER -->
       <header class="page-header">
-        <div class="topline">
-          Markets, valuation, research
-          <span class="cmu-tag">Carnegie Mellon University</span>
+        <div class="header-left">
+          <div class="topline">
+            <span>valuation, trading, research</span>
+            <span class="cmu-tag">CMU</span>
+          </div>
+
+          <div class="page-title-row">
+            <h1 class="page-title">Internships and Professional Work</h1>
+            <div class="typewriter" id="typewriter"></div>
+          </div>
+
+          <div class="subtitle">
+            I work on valuation, market modeling, portfolio construction and growth equity. I build trading models. I evaluate startups. I analyze cap tables and returns. I run ETF sentiment and sector screens using NLP. I care about what something is worth, why it is worth that, and who benefits from it.
+          </div>
+
+          <div class="badge-row">
+            <div class="badge">Growth equity</div>
+            <div class="badge">DCF and goodwill valuation</div>
+            <div class="badge">ETF analytics</div>
+            <div class="badge">Algorithmic trading</div>
+          </div>
         </div>
 
-        <h1 class="page-title">Internships and Professional Experience</h1>
-
-        <div class="subtitle">
-          I work across public markets, data driven investing, and early stage equity. My focus is finding value and telling the story with numbers. :contentReference[oaicite:2]{index=2}
-        </div>
-
-        <div class="badge-row">
-          <div class="badge">Growth Equity</div>
-          <div class="badge">DCF modeling</div>
-          <div class="badge">ETF Analytics</div>
-          <div class="badge">Python Research</div>
+        <div class="header-right">
+          <img src="snoopy_walk.png" alt="Snoopy walking" />
+          <div class="caption">
+            walking through cap tables like it’s normal
+          </div>
         </div>
       </header>
 
-      <section class="section-card">
+      <!-- Scottie Ventures -->
+      <section class="section-block">
         <div class="section-heading">
           <div>
             <span class="role-title">Growth Equity Analyst</span>
-            <span class="role-org">Scottie Ventures</span>
+            <span class="role-org">Scottie Ventures, Carnegie Mellon University</span>
           </div>
           <div class="role-dates">Sept 2025 to Present</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>Evaluate startups by conducting market research, analyzing cap tables, and building investment theses.</li>
-            <li>Estimate valuation and project future returns with a focus on engineering and energy sector deals.</li>
-            <li>Identify why now cases for frontier tech and infrastructure focused ideas.</li>
+            <li>Evaluating startups by conducting market research, analyzing cap tables, developing investment theses and projecting future returns.</li>
+            <li>Focusing on engineering and energy sector ideas, identifying promising technical innovations and timing.</li>
+            <li>Connecting valuation to real world adoption, not just hype.</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- Lummus Digital -->
+      <section class="section-block">
         <div class="section-heading">
           <div>
             <span class="role-title">Financial Analysis Intern</span>
-            <span class="role-org">Lummus Digital</span>
+            <span class="role-org">Lummus Digital, Bloomfield NJ and Manhattan NY</span>
           </div>
           <div class="role-dates">Sept 2024 to June 2025</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>Created algorithmic trading models that historically outperformed the market.</li>
-            <li>Built valuation work, DCF analysis, relative valuation, and goodwill valuation used in an international buyout process.</li>
-            <li>Presented algorithm performance directly to executives, and used feedback to tune models.</li>
+            <li>Built algorithmic trading models that historically outperformed market benchmarks in backtesting.</li>
+            <li>Performed DCF, relative valuation and goodwill valuation work that was actually used in an international buyout process.</li>
+            <li>Presented algorithms directly to executives and tuned performance based on their feedback.</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- FIRC -->
+      <section class="section-block">
         <div class="section-heading">
           <div>
             <span class="role-title">Data Science and Quantitative Research Intern</span>
-            <span class="role-org">FinTech Innovation and Research Center (FIRC)</span>
+            <span class="role-org">FinTech Innovation and Research Center (FIRC), Boston MA (virtual)</span>
           </div>
           <div class="role-dates">Sept 2024 to June 2025</div>
         </div>
         <div class="section-body">
           <ul>
-            <li>Programmed NLP sentiment analysis on markets to forecast industry trends.</li>
-            <li>Oversaw models that read ETF whitepapers, then generated sector recommendations and position ideas.</li>
+            <li>Built sentiment analysis on markets using NLP to forecast industry trends.</li>
+            <li>Oversaw models that read ETF whitepapers to produce sector recommendations and position ideas.</li>
             <li>Constructed a diversified ETF portfolio using those signals.</li>
           </ul>
         </div>
       </section>
 
-      <section class="section-card">
+      <!-- Tech Stack -->
+      <section class="section-block">
         <div class="section-heading">
-          <div>Technical Stack</div>
+          <div>Technical Stack and Capabilities</div>
         </div>
         <div class="section-body">
-          <div class="badge-row">
-            <div class="badge">Python</div>
-            <div class="badge">pandas</div>
-            <div class="badge">NumPy</div>
-            <div class="badge">Matplotlib</div>
-            <div class="badge">SQL</div>
-            <div class="badge">Bloomberg Terminal</div>
-            <div class="badge">DCF and Valuation</div>
-            <div class="badge">GAAP Accounting</div>
-            <div class="badge">Portfolio Construction</div>
-          </div>
+          <ul>
+            <li>DCF, GAAP accounting, financial statement creation and analysis.</li>
+            <li>Python, pandas, NumPy, Matplotlib, SQL, Java, Jupyter Notebook, Docker, Bloomberg Terminal.</li>
+            <li>Portfolio construction, amortization logic and early stage company evaluation.</li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>&copy; Sohan Chakravorty 2025</div>
+      <div>© Sohan Chakravorty 2025</div>
     </footer>
 
-    <div class="snoopy-floating">
-      <div class="snoopy-emoji">🐶</div>
-      <div class="bubble">
-        Your model works, but what about tail risk.
-      </div>
-    </div>
-
+    <!-- THEME TOGGLE SCRIPT -->
     <script>
-      const btn = document.getElementById("theme-toggle");
-      function applyTheme() {
+      const themeBtn = document.getElementById("theme-toggle");
+      function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+        themeBtn.textContent = isLight ? "🌙" : "☀️";
       }
-      btn.addEventListener("click", () => {
+      themeBtn.addEventListener("click", () => {
         document.documentElement.classList.toggle("light");
-        applyTheme();
+        applyThemeIcon();
       });
-      applyTheme();
+      applyThemeIcon();
+    </script>
+
+    <!-- TYPEWRITER SCRIPT -->
+    <script>
+      function runTypewriter(phrases) {
+        const el = document.getElementById("typewriter");
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let mode = "typing";
+        let pauseCounter = 0;
+
+        function tick() {
+          const currentPhrase = phrases[phraseIndex];
+
+          if (mode === "typing") {
+            charIndex++;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === currentPhrase.length) {
+              mode = "pausingAfterType";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "pausingAfterType") {
+            pauseCounter++;
+            el.textContent = currentPhrase + "▌";
+            if (pauseCounter > 20) {
+              if (phraseIndex === phrases.length - 1) {
+                mode = "done";
+              } else {
+                mode = "deleting";
+              }
+            }
+            setTimeout(tick, 150);
+            return;
+          }
+
+          if (mode === "deleting") {
+            charIndex--;
+            if (charIndex < 0) charIndex = 0;
+            el.textContent = currentPhrase.slice(0, charIndex) + "▌";
+            if (charIndex === 0) {
+              mode = "pausingAfterDelete";
+              pauseCounter = 0;
+            }
+            setTimeout(tick, 80);
+            return;
+          }
+
+          if (mode === "pausingAfterDelete") {
+            pauseCounter++;
+            el.textContent = "▌";
+            if (pauseCounter > 8) {
+              phraseIndex++;
+              charIndex = 0;
+              mode = "typing";
+            }
+            setTimeout(tick, 120);
+            return;
+          }
+
+          if (mode === "done") {
+            el.textContent = currentPhrase;
+            el.classList.add("done");
+            return;
+          }
+        }
+
+        tick();
+      }
+
+      runTypewriter([
+        "I build and test models that try to price risk",
+        "I will absolutely open Excel at 2am",
+        "I build and test models that try to price risk"
+      ]);
     </script>
   </body>
 </html>
