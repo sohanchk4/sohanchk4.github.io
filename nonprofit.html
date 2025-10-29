@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sohan Chakravorty • Nonprofit & Community Work</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+      <div class="nav-left">
+        <div class="brand">Sohan Chakravorty</div>
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="internships.html">Internships</a>
+          <a href="clubs.html">Clubs</a>
+          <a href="nonprofit.html">Nonprofit</a>
+        </div>
+      </div>
+
+      <div class="toggle-wrapper">
+        <button id="theme-toggle">Light Mode</button>
+      </div>
+    </nav>
+
+    <main class="page-wrapper">
+      <header class="page-header">
+        <div class="topline">Access • Health • Culture</div>
+        <h1 class="page-title">Nonprofit & Community Impact</h1>
+        <div class="subtitle">
+          I care about making finance and wellness accessible — especially for seniors, immigrant communities, and students who don’t usually get that support.
+        </div>
+      </header>
+
+      <!-- FitYouUSA -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <span class="role-title">Financial Coordinator</span>
+            <span class="role-org">@ FitYouUSA (501(c)(3))</span>
+          </div>
+          <div class="role-dates">Jul 2023 – Present</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Helped file founding paperwork and maintain finances for government compliance.</li>
+            <li>Applied for 15+ government grants to fund programs.</li>
+            <li>Worked with local mayors in New Jersey to run senior center programs focused on movement, Parkinson’s therapy, and social connection through table tennis.</li>
+            <li>Scaled the organization by recruiting 25+ youth leaders.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- North Jersey Bengali Association -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <span class="role-title">Pricing Analyst & Creative Director</span>
+            <span class="role-org">@ North Jersey Bengali Association (501(c)(3))</span>
+          </div>
+          <div class="role-dates">Aug 2022 – Present</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Led finance for a cultural concert with $230,000+ revenue.</li>
+            <li>Developed a sponsorship strategy that brings in $5,000+ each year.</li>
+            <li>Managed budgets and reported financials to the public for transparency.</li>
+            <li>Designed marketing materials to promote Bengali American culture and community programming.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <div>Why this matters to me</div>
+        </div>
+        <div class="section-body">
+          <p>
+            Finance isn’t just Wall Street spreadsheets. It’s: can we afford to run another class for seniors with Parkinson’s? Can we keep a cultural space alive for immigrant families? Can we build something that survives after we graduate?
+          </p>
+          <p>
+            My work in these orgs taught me how to treat money like infrastructure — something that quietly holds a community up.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; Sohan Chakravorty 2025</div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("theme-toggle");
+      function applyTheme() {
+        const isLight = document.documentElement.classList.contains("light");
+        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+      }
+      btn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("light");
+        applyTheme();
+      });
+      applyTheme();
+    </script>
+  </body>
+</html>
