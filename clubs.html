@@ -6,6 +6,7 @@
     <title>Sohan Chakravorty • Clubs and Leadership</title>
     <link rel="icon" type="image/png" href="snoopy_walk.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body class="page-transition">
@@ -47,7 +48,9 @@
         </div>
       </div>
 
-      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
     </nav>
 
     <main class="page-wrapper">
@@ -185,7 +188,7 @@
       
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        themeBtn.textContent = isLight ? "🌙" : "☀️";
+        themeBtn.innerHTML = isLight ? '<i class="ph ph-moon"></i>' : '<i class="ph ph-sun"></i>';
       }
       
       themeBtn.addEventListener("click", function() {

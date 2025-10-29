@@ -572,8 +572,6 @@ h1.page-title {
 }
 
 .section-block:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--card-hover-shadow);
   border-color: rgba(196, 18, 48, 0.4);
 }
 
@@ -633,11 +631,6 @@ h1.page-title {
 
 .section-body li {
   margin-bottom: 0.5rem;
-  transition: transform 0.2s ease;
-}
-
-.section-body li:hover {
-  transform: translateX(5px);
 }
 
 .grid-2 {

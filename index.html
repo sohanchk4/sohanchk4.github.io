@@ -6,6 +6,7 @@
     <title>Sohan Chakravorty • About</title>
     <link rel="icon" type="image/png" href="snoopy_walk.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body class="page-transition">
@@ -48,7 +49,9 @@
         </div>
       </div>
 
-      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
     </nav>
 
     <main class="page-wrapper">
@@ -144,32 +147,32 @@
         <div class="section-body">
           <div class="tech-stack-grid">
             <div class="tech-icon">
-              <span class="tech-icon-symbol">📊</span>
+              <i class="ph ph-chart-bar tech-icon-symbol"></i>
               <div class="tech-icon-name">Excel</div>
               <div class="tech-icon-tooltip">Financial modeling & DCF analysis</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">📈</span>
+              <i class="ph ph-trend-up tech-icon-symbol"></i>
               <div class="tech-icon-name">Bloomberg</div>
               <div class="tech-icon-tooltip">Market data & terminal analysis</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">🐍</span>
+              <i class="ph ph-file-py tech-icon-symbol"></i>
               <div class="tech-icon-name">Python</div>
               <div class="tech-icon-tooltip">Used for algo trading models & NLP</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">☕</span>
+              <i class="ph ph-coffee tech-icon-symbol"></i>
               <div class="tech-icon-name">Java</div>
               <div class="tech-icon-tooltip">Object-oriented programming</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">🗄️</span>
+              <i class="ph ph-database tech-icon-symbol"></i>
               <div class="tech-icon-name">SQL</div>
               <div class="tech-icon-tooltip">Data queries & analysis</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">🎨</span>
+              <i class="ph ph-paint-brush tech-icon-symbol"></i>
               <div class="tech-icon-name">Photoshop</div>
               <div class="tech-icon-tooltip">Designing promo materials & graphics</div>
             </div>
@@ -308,7 +311,7 @@
       
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        themeBtn.textContent = isLight ? "🌙" : "☀️";
+        themeBtn.innerHTML = isLight ? '<i class="ph ph-moon"></i>' : '<i class="ph ph-sun"></i>';
       }
       
       themeBtn.addEventListener("click", function() {

@@ -6,6 +6,7 @@
     <title>Sohan Chakravorty • Internships</title>
     <link rel="icon" type="image/png" href="snoopy_walk.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body class="page-transition">
@@ -48,7 +49,9 @@
         </div>
       </div>
 
-      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">🌙</button>
+      <button id="theme-toggle" class="theme-toggle-btn" title="toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
     </nav>
 
     <main class="page-wrapper">
@@ -164,32 +167,32 @@
         <div class="section-body">
           <div class="tech-stack-grid">
             <div class="tech-icon">
-              <span class="tech-icon-symbol">💰</span>
+              <i class="ph ph-currency-dollar tech-icon-symbol"></i>
               <div class="tech-icon-name">DCF Analysis</div>
               <div class="tech-icon-tooltip">Discounted cash flow modeling & valuation</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">📋</span>
+              <i class="ph ph-notebook tech-icon-symbol"></i>
               <div class="tech-icon-name">GAAP</div>
               <div class="tech-icon-tooltip">Financial statement analysis & accounting</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">📊</span>
+              <i class="ph ph-chart-bar tech-icon-symbol"></i>
               <div class="tech-icon-name">Comps</div>
               <div class="tech-icon-tooltip">Comparable company & precedent analysis</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">📈</span>
+              <i class="ph ph-trend-up tech-icon-symbol"></i>
               <div class="tech-icon-name">Portfolio Theory</div>
               <div class="tech-icon-tooltip">Construction, optimization & backtesting</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">🎯</span>
+              <i class="ph ph-target tech-icon-symbol"></i>
               <div class="tech-icon-name">Cap Tables</div>
               <div class="tech-icon-tooltip">Equity structure & startup valuation</div>
             </div>
             <div class="tech-icon">
-              <span class="tech-icon-symbol">🔍</span>
+              <i class="ph ph-magnifying-glass tech-icon-symbol"></i>
               <div class="tech-icon-name">Due Diligence</div>
               <div class="tech-icon-tooltip">Investment analysis & risk assessment</div>
             </div>
@@ -248,7 +251,7 @@
       
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
-        themeBtn.textContent = isLight ? "🌙" : "☀️";
+        themeBtn.innerHTML = isLight ? '<i class="ph ph-moon"></i>' : '<i class="ph ph-sun"></i>';
       }
       
       themeBtn.addEventListener("click", function() {
