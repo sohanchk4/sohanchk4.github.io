@@ -674,15 +674,23 @@ footer.site-footer {
 .contact-links a {
   color: var(--text-main);
   text-decoration: underline;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  padding: 0.1rem 0.3rem;
+  margin-left: 0.3rem;
+  margin-right: -0.3rem;
+  margin-top: -0.1rem;
+  margin-bottom: -0.1rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  display: inline-block;
 }
 
 .contact-links a:hover {
-  background: var(--text-main);
-  color: var(--bg-color);
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
+  border-color: rgba(196, 18, 48, 0.6);
+  background: var(--accent-glow);
+  box-shadow: 0 0 12px rgba(196, 18, 48, 0.3);
   text-decoration: none;
+  transform: translateY(-1px);
 }
 
 /* =========================================
