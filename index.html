@@ -1,95 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Your Name</title>
-
-    <style>
-      body {
-        font-family: system-ui, sans-serif;
-        max-width: 700px;
-        margin: 40px auto;
-        line-height: 1.6;
-      }
-
-      header {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      img.pfp {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      h1 {
-        margin: 1rem 0 0.5rem;
-        font-size: 2rem;
-      }
-
-      nav a {
-        margin: 0 10px;
-        text-decoration: none;
-        font-weight: 500;
-      }
-
-      section {
-        margin-bottom: 2rem;
-      }
-
-      footer {
-        font-size: 0.9rem;
-        color: #555;
-        border-top: 1px solid #ddd;
-        padding-top: 1rem;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sohan Chakravorty • About</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      <!-- If you have a picture later, replace photo.jpg with your real file -->
-      <img class="pfp" src="photo.jpg" alt="Your photo" />
-      <h1>Your Name</h1>
-      <p>Short intro about you. (e.g. "Economics + IR student at Wellesley, interested in development, data, and international finance.")</p>
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+      <div class="nav-left">
+        <div class="brand">Sohan Chakravorty</div>
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="internships.html">Internships</a>
+          <a href="clubs.html">Clubs</a>
+          <a href="nonprofit.html">Nonprofit</a>
+        </div>
+      </div>
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+      <div class="toggle-wrapper">
+        <button id="theme-toggle">Light Mode</button>
+      </div>
+    </nav>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Write 3–5 sentences about who you are, what you're studying, and what you're interested in.
-        Keep it friendly and specific. Imagine you're talking to someone who might want to hire you
-        or collaborate with you.
-      </p>
-    </section>
+    <main class="page-wrapper">
+      <header class="page-header">
+        <div class="topline">Finance • Data • Impact</div>
+        <h1 class="page-title">
+          Hi, I'm Sohan Chakravorty.
+        </h1>
+        <div class="subtitle">
+          I'm a Carnegie Mellon student in Finance and Statistics & Machine Learning (4.0 GPA), and I build things at the intersection of markets, analytics, and social impact. I care about smart investing, real-world access to financial literacy, and community work that actually touches people’s lives. :contentReference[oaicite:1]{index=1}
+        </div>
 
-    <section id="projects">
-      <h2>Projects / Work</h2>
-      <ul>
-        <li><strong>Project / Role 1:</strong> One-sentence description of what you did, why it mattered, and impact/result.</li>
-        <li><strong>Project / Role 2:</strong> Same idea. Keep it short and impressive.</li>
-        <li><strong>Project / Role 3:</strong> You can talk about research, clubs, internships, etc. Doesn't have to be code.</li>
-      </ul>
-    </section>
+        <div class="badge-row">
+          <div class="badge">Finance + Valuation</div>
+          <div class="badge">ETF research</div>
+          <div class="badge">Algorithmic trading</div>
+          <div class="badge">Python / pandas</div>
+          <div class="badge">Community programs</div>
+        </div>
+      </header>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:you@example.com">you@example.com</a><br/>
-        LinkedIn: <a href="https://www.linkedin.com/in/YOUR-LINK">linkedin.com/in/YOUR-LINK</a>
-      </p>
-    </section>
+      <section class="section-card">
+        <div class="section-heading">
+          <div>What I Do</div>
+        </div>
+        <div class="section-body">
+          <p>
+            I analyze companies, public markets, and private startups. I've built algorithmic trading models that beat benchmarks, run portfolio construction using sentiment and NLP, and developed theses for early-stage engineering and energy investments.
+          </p>
+          <p>
+            Outside the spreadsheet world, I lead financial literacy education for high school students and help run nonprofit programs focused on seniors’ health and community cultural events.
+          </p>
+        </div>
+      </section>
 
-    <footer>
-      <p>© Your Name, 2025.</p>
+      <div class="grid-2">
+        <section class="section-card">
+          <div class="section-heading">
+            <div>Education</div>
+          </div>
+          <div class="section-body">
+            <p>
+              <span class="role-title">Carnegie Mellon University</span><br/>
+              BSBA (Finance) + BS Statistics &amp; Machine Learning<br/>
+              GPA: 4.0/4.0
+            </p>
+            <p class="role-dates">
+              Relevant coursework: Multivariable Calculus, Accelerated Microeconomics, Accounting
+            </p>
+            <p>
+              Bergen County Academies — IB Diploma<br/>
+              IB Economics HL (7), IB Math AA HL (6), IB Computer Science SL (6), AP Statistics (5), AP Calculus (5)
+            </p>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <div class="section-heading">
+            <div>Core Skills</div>
+          </div>
+          <div class="section-body">
+            <ul>
+              <li>Valuation (DCF, comps, goodwill)</li>
+              <li>Algorithmic trading / portfolio construction</li>
+              <li>Market + sector research</li>
+              <li>Python (pandas, NumPy, Matplotlib), SQL, Java</li>
+              <li>Financial statements & GAAP accounting</li>
+              <li>Curriculum design & teaching financial literacy</li>
+              <li>Grant writing and nonprofit budgeting</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid-2">
+        <section class="section-card">
+          <div class="section-heading">
+            <div>Contact</div>
+          </div>
+          <div class="section-body contact-links">
+            <p>
+              Email: <a href="mailto:sohanc@cmu.edu">sohanc@cmu.edu</a><br/>
+              LinkedIn: <a href="https://linkedin.com/in/sohan-chakravorty/">linkedin.com/in/sohan-chakravorty/</a><br/>
+              Location: NYC Area
+            </p>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <div class="section-heading">
+            <div>Beyond Class</div>
+          </div>
+          <div class="section-body">
+            <ul>
+              <li>Growth Equity Analyst @ Scottie Ventures (energy & engineering focus)</li>
+              <li>Vice President, Curriculums @ Moneythink CMU (building student-led financial literacy)</li>
+              <li>Financial Coordinator @ FitYouUSA (youth-led nonprofit serving seniors & Parkinson’s patients)</li>
+              <li>Creative Director @ North Jersey Bengali Association (culture + fundraising)</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; Sohan Chakravorty 2025</div>
     </footer>
+
+    <script>
+      // theme toggle script
+      const btn = document.getElementById("theme-toggle");
+      function applyTheme() {
+        const isLight = document.documentElement.classList.contains("light");
+        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+      }
+      btn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("light");
+        applyTheme();
+      });
+      applyTheme();
+    </script>
   </body>
 </html>
