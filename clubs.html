@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sohan Chakravorty • Clubs & Leadership</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+      <div class="nav-left">
+        <div class="brand">Sohan Chakravorty</div>
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="internships.html">Internships</a>
+          <a href="clubs.html">Clubs</a>
+          <a href="nonprofit.html">Nonprofit</a>
+        </div>
+      </div>
+
+      <div class="toggle-wrapper">
+        <button id="theme-toggle">Light Mode</button>
+      </div>
+    </nav>
+
+    <main class="page-wrapper">
+      <header class="page-header">
+        <div class="topline">Teaching • Competition • Discipline</div>
+        <h1 class="page-title">Clubs & Campus Leadership</h1>
+        <div class="subtitle">
+          I like building things that last — programs, teams, and systems. Finance is one part of it. Execution is the other.
+        </div>
+      </header>
+
+      <!-- Moneythink CMU -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>
+            <span class="role-title">Vice President, Curriculums</span>
+            <span class="role-org">@ Moneythink CMU</span>
+          </div>
+          <div class="role-dates">Sept 2025 – Present</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Leading a team designing financial literacy lessons taught by CMU students.</li>
+            <li>Partnering with local high schools to deliver real-world money skills to students.</li>
+            <li>Building a student-run personal finance course at CMU to scale impact.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Competitions -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>Academic Competitions</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>DECA: Top 10 Internationally, 4× Top 5 New Jersey.</li>
+            <li>Model United Nations: Top 4 at Yale and Princeton conferences.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Athletics -->
+      <section class="section-card">
+        <div class="section-heading">
+          <div>Athletics</div>
+        </div>
+        <div class="section-body">
+          <ul>
+            <li>Nationally rated fencing.</li>
+            <li>Former nationally rated table tennis player and current coach.</li>
+            <li>MLS NEXT soccer background.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <div>Certifications & Languages</div>
+        </div>
+        <div class="section-body">
+          <div class="badge-row">
+            <div class="badge">Bloomberg Market Concepts</div>
+            <div class="badge">English (Fluent)</div>
+            <div class="badge">Bengali (Fluent)</div>
+            <div class="badge">Spanish (Intermediate)</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; Sohan Chakravorty 2025</div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("theme-toggle");
+      function applyTheme() {
+        const isLight = document.documentElement.classList.contains("light");
+        btn.textContent = isLight ? "Dark Mode" : "Light Mode";
+      }
+      btn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("light");
+        applyTheme();
+      });
+      applyTheme();
+    </script>
+  </body>
+</html>
