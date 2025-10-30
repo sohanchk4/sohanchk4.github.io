@@ -64,14 +64,14 @@
           </div>
 
           <div class="subtitle">
-            I work on valuation, market modeling, portfolio construction and growth equity. I build trading models. I evaluate startups. I analyze cap tables and returns. I run ETF sentiment and sector screens using NLP. I care about what something is worth, why it is worth that, and who benefits from it.
+            I work on valuation, market modeling, and portfolio construction. I build trading models. I value companies. I run ETF sentiment and sector screens using NLP. I care about what something is worth, why it is worth that, and who benefits from it.
           </div>
         </div>
 
         <div class="header-right">
           <img src="snoopy_walk.png" alt="Snoopy walking" loading="lazy" />
           <div class="caption">
-            walking through cap tables like it's normal
+            integrating tech into finance
           </div>
         </div>
       </header>
@@ -323,19 +323,29 @@
       // TIMELINE EXPAND/COLLAPSE
       document.querySelectorAll('.timeline-item').forEach(function(item) {
         item.addEventListener('click', function() {
-          const isExpanded = this.classList.contains('expanded');
-          
-          // Close all other items
-          document.querySelectorAll('.timeline-item').forEach(function(otherItem) {
-            otherItem.classList.remove('expanded');
-          });
-          
-          // Toggle current item
-          if (!isExpanded) {
-            this.classList.add('expanded');
-          }
+          // Toggle current item independently
+          this.classList.toggle('expanded');
         });
       });
+
+      // EXPAND ALL TIMELINE ITEMS when clicking "Click to expand"
+      const expandAllHint = document.querySelector('.section-heading .muted');
+      if (expandAllHint) {
+        expandAllHint.style.cursor = 'pointer';
+        expandAllHint.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const allItems = document.querySelectorAll('.timeline-item');
+          const allExpanded = Array.from(allItems).every(item => item.classList.contains('expanded'));
+
+          allItems.forEach(function(item) {
+            if (allExpanded) {
+              item.classList.remove('expanded');
+            } else {
+              item.classList.add('expanded');
+            }
+          });
+        });
+      }
 
       // SCROLL-TRIGGERED FADE-INS
       const observerOptions = {
