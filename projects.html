@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Sohan Chakravorty • Nonprofit</title>
+    <title>Sohan Chakravorty • Projects</title>
     <link rel="icon" type="image/png" href="snoopy_walk.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -16,18 +16,18 @@
       <div class="loading-bar-container">
         <div class="loading-bar"></div>
       </div>
-      <div class="loading-text">Loading community work...</div>
+      <div class="loading-text">Loading projects...</div>
     </div>
 
     <!-- soft finance background notes -->
     <div class="bg-math-layer" id="bgMath">
       <div class="bg-math-block">
-        <div class="bg-math-label">program budget</div>
-        next = now + grants − cost(programs)
+        <div class="bg-math-label">project planning</div>
+        value = scope × execution
       </div>
       <div class="bg-math-block">
-        <div class="bg-math-label">transparency rule</div>
-        tell donors where every dollar went
+        <div class="bg-math-label">shipping beats perfection</div>
+        done > perfect
       </div>
     </div>
 
@@ -59,59 +59,30 @@
       <header class="page-header">
         <div class="header-left">
           <div class="page-title-row">
-            <h1 class="page-title">Nonprofit and Community Work</h1>
+            <h1 class="page-title">Projects</h1>
             <div class="typewriter" id="typewriter"></div>
           </div>
 
           <div class="subtitle">
-            My work in finance isn't just trading models and discounted cash flows. It is also filing compliance paperwork, getting grant money for Parkinson's support for seniors in New Jersey, making cultural events financially transparent, and creating a safe space for Bengali families. I treat money as infrastructure that holds people up.
+            Building things that matter, one project at a time.
           </div>
         </div>
 
         <div class="header-right">
-          <img src="snoopy_chill.png" alt="Snoopy chilling" loading="lazy" />
+          <img src="snoopy_walk.png" alt="Snoopy walking" loading="lazy" />
           <div class="caption">
-            money can be care work
+            shipping soon
           </div>
         </div>
       </header>
 
-      <!-- FitYouUSA -->
-      <section class="section-block">
-        <div class="section-heading">
-          <div>
-            <span class="role-title">Financial Coordinator</span>
-            <span class="role-org">FitYouUSA (501(c)(3)), New Jersey</span>
-          </div>
-          <div class="role-dates">Jul 2023 to Present</div>
+      <!-- Coming Soon Message -->
+      <section class="section-block" style="text-align: center; padding: 3rem 2rem;">
+        <div style="font-size: 1.5rem; font-weight: bold; color: var(--text-main); margin-bottom: 1rem;">
+          Big stuff in the works...
         </div>
-        <div class="section-body">
-          <p>Filed founding paperwork to register the nonprofit and managed finances to meet compliance standards. Applied for more than 15 government grants, working with local mayors to support senior centers in Dumont and Cresskill, New Jersey. Helped grow the organization to 25+ youth leaders, using table tennis as movement, engagement and therapy for seniors with Parkinson's.</p>
-        </div>
-      </section>
-
-      <!-- North Jersey Bengali Association -->
-      <section class="section-block">
-        <div class="section-heading">
-          <div>
-            <span class="role-title">Pricing Analyst and Creative Director</span>
-            <span class="role-org">North Jersey Bengali Association (501(c)(3)), New Jersey</span>
-          </div>
-          <div class="role-dates">Aug 2022 to Present</div>
-        </div>
-        <div class="section-body">
-          <p>Led finance for a cultural concert netting $230,000+. Built a sponsorship strategy that brings in more than $5,000 yearly and keeps programming going. Managed budgets and publicly reported financials so donors and families could actually see where money went. Designed promotional materials to support and celebrate Bengali American culture.</p>
-        </div>
-      </section>
-
-      <!-- Why -->
-      <section class="section-block">
-        <div class="section-heading">
-          <div>Why This Matters To Me</div>
-        </div>
-        <div class="section-body">
-          <p>Finance decides which programs exist: Can we run one more table tennis session for seniors with Parkinson's? Can we afford homemade Bengali fish at the next event? Can we make sure teenagers understand debt before they sign something that will follow them for a decade?</p>
-          <p>My work is about teaching, resourcing and reducing gatekeeping. Knowing financial literacy should be a right, and using money properly is a moral obligation.</p>
+        <div style="font-size: 1.2rem; color: var(--text-dim);">
+          Come back December 25th, 2025 ;)
         </div>
       </section>
     </main>
@@ -132,7 +103,7 @@
           }
         }, 1200);
       });
-      
+
       // Backup: Remove loading screen after window fully loads
       window.addEventListener('load', function() {
         setTimeout(function() {
@@ -163,18 +134,18 @@
 
       // THEME TOGGLE
       const themeBtn = document.getElementById("theme-toggle");
-      
+
       function applyThemeIcon() {
         const isLight = document.documentElement.classList.contains("light");
         themeBtn.innerHTML = isLight ? '<i class="ph ph-moon"></i>' : '<i class="ph ph-sun"></i>';
       }
-      
+
       themeBtn.addEventListener("click", function() {
         document.documentElement.classList.toggle("light");
         applyThemeIcon();
         localStorage.setItem('theme', document.documentElement.classList.contains("light") ? 'light' : 'dark');
       });
-      
+
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'light') {
         document.documentElement.classList.add('light');
@@ -185,7 +156,7 @@
       function runTypewriter(phrases) {
         const el = document.getElementById("typewriter");
         if (!el) return;
-        
+
         let phraseIndex = 0;
         let charIndex = 0;
         let mode = "typing";
@@ -259,9 +230,9 @@
       }
 
       runTypewriter([
-        "Money is infrastructure",
-        "I file grant paperwork so seniors get care",
-        "Money is infrastructure"
+        "Building the future",
+        "One project at a time",
+        "Building the future"
       ]);
 
       // SCROLL-TRIGGERED FADE-INS
